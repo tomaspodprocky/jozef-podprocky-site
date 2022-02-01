@@ -1,0 +1,26 @@
+.container {
+  max-width: 1000px;
+  margin:0 auto;
+  color: beige;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.heading {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    color: rgb(188, 140, 236);
+  }
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  padding: 20px 20px;
+}
+
+.site-title {
+    font-size: 3rem;
+    color: gray;
+    font-weight: 700;
+    margin: 3rem 0;
+  }

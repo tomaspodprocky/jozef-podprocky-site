@@ -1,0 +1,26 @@
+.page {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.img {
+    display:inline-block ;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: 10px;
+    float: left;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.paragraph {
+    
+}
+
+.paragraph p{
+    margin: 10px auto;
+    text-align: justify;
+}

@@ -1,0 +1,11 @@
+.scorePage {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 80px;
+    align-items:end;
+    justify-items: center;
+}
+
+.scoreItem{
+    margin: auto;
+}

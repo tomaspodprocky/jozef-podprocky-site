@@ -4,7 +4,8 @@ import * as styles from '../styles/navbar.module.css'
 
 export default function Navbar() {
     return (
-        <nav className={styles.navbar}>
+        <nav className={styles.navcontainer} >
+        <div className={styles.navbar}>
             <h1>Jozef Podprocký</h1>
             <div className={styles.links}>
                 <Link to='/'>Úvod</Link>
@@ -14,6 +15,7 @@ export default function Navbar() {
                 <Link to='/scores'>Na stiahnutie</Link>
                 <Link to='/'>Kontakt</Link>
             </div>
+        </div>
         </nav>
     )
 }

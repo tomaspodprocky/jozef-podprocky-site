@@ -28,7 +28,7 @@ const Layout = ({ pageTitle, children }) => {
           {children}
         </div>
       </main>
-      <footer className={footer}>Kontakt</footer>
+      {/* <footer className={footer}>Kontakt</footer> */}
     </div>
   )
 }

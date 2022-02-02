@@ -1,24 +1,17 @@
 .page {
+    display:flex;
     padding-left: 10px;
     padding-right: 10px;
 }
 
 .img {
-    display:inline-block ;
-    max-width: 300px;
+    flex-grow: 1;
     margin-left: auto;
     margin-right: 10px;
-    float: left;
-}
-
-.wrapper {
-    display: grid;
-    grid-template-columns: auto auto;
 }
 
 .paragraph {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    flex-grow:1;
 }
 
 .paragraph p{

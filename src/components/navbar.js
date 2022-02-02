@@ -11,9 +11,9 @@ export default function Navbar() {
                 <Link to='/'>Úvod</Link>
                 <Link to='/music'>Ukážky</Link>
                 <Link to='/works'>Tvorba</Link>
-                <Link to='/awards'>Ocenenia</Link>
-                <Link to='/scores'>Na stiahnutie</Link>
-                <Link to='/'>Kontakt</Link>
+                <Link to='/cv'>Životopis</Link>
+                <Link to='/downloads'>Na stiahnutie</Link>
+                <Link to='/contact'>Kontakt</Link>
             </div>
         </div>
         </nav>

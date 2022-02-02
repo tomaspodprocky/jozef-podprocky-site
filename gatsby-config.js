@@ -10,8 +10,8 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: `blog`,
-        path: `${__dirname}/blog`,
+        name: `news`,
+        path: `${__dirname}/news`,
       }
     },
     {
@@ -35,7 +35,6 @@ module.exports = {
         path: `${__dirname}/mp3`,
       }
     },
-    "gatsby-plugin-mdx",
     {
       resolve: "gatsby-transformer-csv",
       options: {
@@ -43,6 +42,6 @@ module.exports = {
       }
     },
     "gatsby-transformer-json",
-    "react-h5-audio-player"
+    "gatsby-transformer-remark"
   ],
 };

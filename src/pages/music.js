@@ -44,7 +44,7 @@ const MusicPage = () => {
                   <td>{node.Opus}</td>
                   <td>{node.Nazov}</td>
                   <td><Player audio_source = 
-                  { data.allFile.nodes.find(file => file.relativePath == node.Mp3) }
+                  { data.allFile.nodes.find(file => file.relativePath === node.Mp3) }
                   /></td>
               </tr>
               ))

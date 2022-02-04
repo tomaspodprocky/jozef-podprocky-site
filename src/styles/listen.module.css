@@ -1,0 +1,17 @@
+.page {
+    margin-top: 150px;
+    margin-bottom:150px;
+}
+
+.table {
+    border-collapse:separate;
+}
+
+.table td {
+    height: 40px;
+    overflow: hidden;
+  }
+
+.centered {
+    text-align: center;
+}

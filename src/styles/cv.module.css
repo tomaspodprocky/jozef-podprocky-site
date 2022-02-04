@@ -1,13 +1,9 @@
+
 .page {
-    display:flex;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
     padding-left: 10px;
     padding-right: 10px;
-}
-
-.img {
-    flex-grow: 1;
-    margin-left: auto;
-    margin-right: 10px;
 }
 
 .paragraph {
@@ -17,4 +13,9 @@
 .paragraph p{
     margin: 10px auto;
     text-align: justify;
+}
+
+.photos {
+    margin-top: -100px;
+    align-self: center;
 }

@@ -2,6 +2,7 @@ import * as React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import Layout from '../components/layout'
 import Player from '../components/audio'
+import * as styles from '../styles/listen.module.css'
 
 const MusicPage = () => {
 
@@ -34,27 +35,27 @@ const MusicPage = () => {
 
 
     return (
-      <Layout pageTitle="Hudba">
-          <p>Par nahravok na ukazku.</p>
-          <div>
-            <table>
+      <div>
+      <Layout pageTitle="Hudba" id="listen">
+          <div className={styles.page}>
+            <table className={styles.table}>
             {
             data.music.nodes.map((node) => (
               <tr key={node.id}>
-                  <td>{node.Opus}</td>
-                  <td>{node.Nazov}</td>
-                  <td><Player audio_source = 
+                <td className={styles.centered}><Player audio_source = 
                   { data.allFile.nodes.find(file => file.relativePath === node.Mp3) }
-                  /></td>
+                /></td>
+                <td>{node.Opus}</td>
+                <td>{node.Nazov}</td>
               </tr>
               ))
             }
             {
               data.videos.nodes.map((node) => (
                 <tr key={node.id} >
+                  <td className={styles.centered}><a href={node.Youtube}>Youtube link</a></td>
                   <td>{node.Opus}</td>
                   <td>{node.Nazov}</td>
-                  <td><a href={node.Youtube}>Youtube link</a></td>
                 </tr>
               )
               )
@@ -62,6 +63,16 @@ const MusicPage = () => {
             </table>
           </div>
       </Layout>
+          <script type="text/javascript">
+          {
+          (function() {
+            document.body.style.backgroundColor = "transparent";
+            document.body.style.backgroundImage = "url(/listen.jpg)";
+            document.body.style.backgroundPosition = "top right";
+            })()
+          }
+        </script>
+        </div>
     )
   }
   // Step 3: Export your component

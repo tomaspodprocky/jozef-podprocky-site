@@ -4,10 +4,12 @@ import Navbar from './navbar'
 import '../styles/global.css'
 
 import {
-    heading,
     container, footer } from '../styles/layout.module.css'
+import { StaticImage } from 'gatsby-plugin-image'
 
-const Layout = ({ pageTitle, children }) => {
+
+const Layout = ({ pageTitle, id, children }) => {
+
   const data = useStaticQuery(graphql`
   query {
     site {
@@ -22,13 +24,15 @@ const Layout = ({ pageTitle, children }) => {
     <div>
       <title>{pageTitle} | {data.site.siteMetadata.title}</title>
       <Navbar />
-      <main>
-        <div className={container}>
-          <h1 className={heading}>{pageTitle}</h1>
-          {children}
-        </div>
-      </main>
-      {/* <footer className={footer}>Kontakt</footer> */}
+      <div className={container}>
+        {/* <h1 className={heading}>{pageTitle}</h1> */}
+        {children}
+      </div>
+      <footer className={footer}>
+        <StaticImage 
+          src = "../images/Ciara.png" alt="Separator image"
+        />
+      </footer>
     </div>
   )
 }

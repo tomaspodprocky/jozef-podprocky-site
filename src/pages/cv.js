@@ -7,12 +7,14 @@ import * as styles from '../styles/cv.module.css'
 // Step 2: Define your component
 const CvPage = () => {
   return (
-    <Layout pageTitle="Životopis">
+    <div>
+    <Layout pageTitle="Životopis" id="about">
       <div className={styles.page}>
-        <div className={styles.img}>
+        <div>
+        <div >
           <StaticImage
               alt="Portrait"
-              src="../images/JP-Portrait.jpg"
+              src="../images/Podpis.png"
           />
         </div>
         <div className={styles.paragraph}>
@@ -20,8 +22,26 @@ const CvPage = () => {
         <p>Morbi a mi nec mauris mollis consequat a eget nunc. Phasellus ornare felis lorem, nec porta odio imperdiet quis. Ut ac sapien vel nibh vehicula iaculis ut eu mi. Nam ut pretium sapien. Sed varius elit eu ex feugiat, vitae blandit mauris varius. Duis ut dui quam. Donec sollicitudin sapien in dictum vulputate. Sed ut mattis dui. Proin mollis, metus sit amet dignissim rutrum, augue enim vulputate quam, eget consectetur augue velit id lacus. Integer pretium at urna semper semper. In fermentum eget nulla eu blandit. Ut aliquam lacinia neque, et condimentum lacus dapibus et. Fusce volutpat augue vitae neque mollis mattis. Ut cursus ligula vitae nibh viverra ultricies id non est. Sed tincidunt magna felis, at malesuada ligula sollicitudin quis.</p>
         <p>Sed tristique metus elementum, faucibus nisl in, imperdiet nulla. In hac habitasse platea dictumst. Nunc id mollis erat, sit amet luctus lectus. Vestibulum maximus commodo sapien, a ullamcorper ipsum molestie quis. In arcu lorem, auctor elementum orci at, placerat auctor leo. Nullam vitae mollis diam. Curabitur tincidunt gravida mi, eget porttitor mi blandit dictum. Vivamus a erat eu augue laoreet euismod vitae sed turpis. Curabitur efficitur vestibulum turpis. </p>
         </div>
+        </div>
+        <div className={styles.photos}>
+          <StaticImage
+              alt="Portrait"
+              src="../images/Fotky.png"
+          />
+        </div>
       </div>
     </Layout>
+    <img src="url(/about.jpg)" style={{display: "none"}} alt="" />
+    <script type="text/javascript">
+        {
+        (function() {
+          document.body.style.backgroundColor = "transparent";
+          document.body.style.backgroundImage = "url(/about.jpg)";
+          document.body.style.backgroundPosition = "top center";
+          })()
+        }
+      </script>
+    </div>
   )
 }
 // Step 3: Export your component

@@ -1,6 +1,6 @@
 .container {
   max-width: 1000px;
-  margin:0 auto;
+  margin: 50px auto 0px auto;
   color: beige;
   background-color: rgba(0, 0, 0, 0);
 }
@@ -12,9 +12,7 @@
   }
 
 .footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
+  text-align: center;
   padding: 20px 20px;
 }
 

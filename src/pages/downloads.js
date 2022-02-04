@@ -34,7 +34,7 @@ const DownloadList = () => {
             <th>Opus</th>
             <th>Nazov</th>
             <th>Minutáž</th>
-            <th></th>
+            <th> </th>
           </tr>
         </thead>
         <tbody>
@@ -55,10 +55,21 @@ const DownloadList = () => {
 
   const DownloadPage = () => {
     return (
-      <Layout pageTitle="Na stiahnutie">
+      <div>
+      <Layout pageTitle="Na stiahnutie" id="download">
           <p>Partitúry na stiahnutie k opusom uvedeným nižsie. V prípade záujmu o iné partitúry nás prosím kontaktujte.</p>
           <DownloadList />
       </Layout>
+      <script type="text/javascript">
+        {
+        (function() {
+          document.body.style.backgroundColor = "transparent";
+          document.body.style.backgroundImage = "url(/download.jpg)";
+          document.body.style.backgroundPosition = "top center";
+          })()
+        }
+      </script>
+      </div>
     )
   }
 

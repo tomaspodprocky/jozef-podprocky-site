@@ -1,9 +1,23 @@
+
 .gridStyle {
-    max-width: 50%;
-    margin-left :0px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    max-width: 25%;
+    justify-content: center;
+    margin-top: 100px;
+    margin-left :auto;
     margin-right: auto;
+    margin-bottom: 150px;
 }
 
 .input {
     color:black;
+    font-size: 1em;
+}
+
+.button {
+    color:black;
+    font-size: 1em;
+    margin-right: 10px;
 }

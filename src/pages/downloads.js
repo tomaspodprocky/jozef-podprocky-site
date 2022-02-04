@@ -54,21 +54,19 @@ const DownloadList = () => {
   }
 
   const DownloadPage = () => {
+    
+    React.useEffect(() => {
+      document.body.style.backgroundColor = "transparent";
+      document.body.style.backgroundImage = "url(/download.jpg)";
+      document.body.style.backgroundPosition = "top center";
+    })
+    
     return (
       <div>
       <Layout pageTitle="Na stiahnutie" id="download">
           <p>Partitúry na stiahnutie k opusom uvedeným nižsie. V prípade záujmu o iné partitúry nás prosím kontaktujte.</p>
           <DownloadList />
       </Layout>
-      <script type="text/javascript">
-        {
-        (function() {
-          document.body.style.backgroundColor = "transparent";
-          document.body.style.backgroundImage = "url(/download.jpg)";
-          document.body.style.backgroundPosition = "top center";
-          })()
-        }
-      </script>
       </div>
     )
   }

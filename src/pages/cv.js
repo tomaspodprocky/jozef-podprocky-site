@@ -6,6 +6,13 @@ import * as styles from '../styles/cv.module.css'
 
 // Step 2: Define your component
 const CvPage = () => {
+
+  React.useEffect(() => {
+    document.body.style.backgroundColor = "transparent";
+    document.body.style.backgroundImage = "url(/about.jpg)";
+    document.body.style.backgroundPosition = "top center";
+  })
+
   return (
     <div>
     <Layout pageTitle="Životopis" id="about">
@@ -31,16 +38,6 @@ const CvPage = () => {
         </div>
       </div>
     </Layout>
-    <img src="url(/about.jpg)" style={{display: "none"}} alt="" />
-    <script type="text/javascript">
-        {
-        (function() {
-          document.body.style.backgroundColor = "transparent";
-          document.body.style.backgroundImage = "url(/about.jpg)";
-          document.body.style.backgroundPosition = "top center";
-          })()
-        }
-      </script>
     </div>
   )
 }

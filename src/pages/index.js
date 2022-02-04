@@ -30,6 +30,12 @@ const IndexPage = () => {
     }
   }`)
 
+  React.useEffect(() => {
+          document.body.style.backgroundColor = "transparent";
+          document.body.style.backgroundImage = "url(/Intro.jpg)";
+          document.body.style.backgroundPosition = "top right";
+        })
+
   return (
     <div className={styles.intro}>
     <Layout pageTitle="Úvod" id="../images/Intro.jpg">
@@ -47,21 +53,10 @@ const IndexPage = () => {
             <p>{node.frontmatter.summary}</p>
             <p>Link: <a href={node.frontmatter.link}>{node.frontmatter.linkName}</a></p>
           </div>
-          )
-          )
+          ))
         }
       </div>
     </Layout>
-    <img src="url(/Intro.jpg)" style={{display: "none"}} alt="" />
-    <script type="text/javascript">
-        {
-        (function() {
-          document.body.style.backgroundColor = "transparent";
-          document.body.style.backgroundImage = "url(/Intro.jpg)";
-          document.body.style.backgroundPosition = "top right";
-          })()
-        }
-      </script>
     </div>
   )
 }

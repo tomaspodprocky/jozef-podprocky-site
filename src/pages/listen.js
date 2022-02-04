@@ -33,6 +33,11 @@ const MusicPage = () => {
       }
     }`)
 
+    React.useEffect(() => {
+      document.body.style.backgroundColor = "transparent";
+      document.body.style.backgroundImage = "url(/listen.jpg)";
+      document.body.style.backgroundPosition = "top right";
+    })
 
     return (
       <div>
@@ -63,15 +68,6 @@ const MusicPage = () => {
             </table>
           </div>
       </Layout>
-          <script type="text/javascript">
-          {
-          (function() {
-            document.body.style.backgroundColor = "transparent";
-            document.body.style.backgroundImage = "url(/listen.jpg)";
-            document.body.style.backgroundPosition = "top right";
-            })()
-          }
-        </script>
         </div>
     )
   }

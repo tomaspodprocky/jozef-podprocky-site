@@ -3,6 +3,13 @@ import Layout from '../components/layout'
 import * as styles from '../styles/contact.module.css'
 
 const ContactPage = () => {
+
+    React.useEffect(() => {
+        document.body.style.backgroundColor = "transparent";
+        document.body.style.backgroundImage = "url(/contact.jpg)";
+        document.body.style.backgroundPosition = "top left";
+      })
+
     return (
         <div>
         <Layout pageTitle="Kontakt" id="contact">
@@ -29,15 +36,6 @@ const ContactPage = () => {
             </div>
         </form>
         </Layout>
-        <script type="text/javascript">
-        {
-        (function() {
-            document.body.style.backgroundColor = "transparent";
-            document.body.style.backgroundImage = "url(/contact.jpg)";
-            document.body.style.backgroundPosition = "top left";
-            })()
-        }
-        </script>
         </div>
     )
   }

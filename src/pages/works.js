@@ -5,20 +5,18 @@ import OpusList from '../components/opuslist'
 
 // Step 2: Define your component
 const WorksPage = () => {
+
+  React.useEffect(() => {
+    document.body.style.backgroundColor = "transparent";
+    document.body.style.backgroundImage = "url(/music.jpg)";
+    document.body.style.backgroundPosition = "top right";
+  })
+
   return (
     <div>
     <Layout pageTitle="Zoznam tvorby" id="music">
         <OpusList />
     </Layout>
-    <script type="text/javascript">
-        {
-        (function() {
-          document.body.style.backgroundColor = "transparent";
-          document.body.style.backgroundImage = "url(/music.jpg)";
-          document.body.style.backgroundPosition = "top right";
-          })()
-        }
-      </script>
     </div>
   )
 }

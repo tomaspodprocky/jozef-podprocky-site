@@ -43,7 +43,7 @@ const DownloadList = () => {
               <td>{node.Opus}</td>
               <td className={styles.column_align_left}>{node.Nazov}</td>
               <td>{node.Minutaz}</td>
-              <td><a href={node.pdf}>Stiahnut</a></td>
+              <td><a href={node.pdf} className={textStyles.buttonYellow}>Stiahnut</a></td>
             </tr>
           ))}
         </tbody>

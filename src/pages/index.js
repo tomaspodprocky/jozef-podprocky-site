@@ -31,8 +31,8 @@ const IndexPage = () => {
   }`)
 
   React.useEffect(() => {
-          document.body.style.backgroundColor = "transparent";
           document.body.style.backgroundImage = "url(/Intro.jpg)";
+          document.body.style.backgroundColor = "transparent";
           document.body.style.backgroundPosition = "top right";
         })
 

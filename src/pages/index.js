@@ -3,12 +3,12 @@ import * as React from 'react'
 import Layout from '../components/layout'
 import * as styles from '../styles/index.module.css'
 import { graphql, useStaticQuery } from 'gatsby'
-import { StaticImage } from 'gatsby-plugin-image'
+import Separator from '../components/separator'
 import BackgroundImage from 'gatsby-background-image'
 
 
 // Step 2: Define your component
-const IndexPage = () => {
+const IndexPage = ({location}) => {
 
   const data = useStaticQuery(graphql`
   query GetMdHeaders {
@@ -38,14 +38,12 @@ const IndexPage = () => {
 
   return (
     <div className={styles.intro}>
-    <Layout pageTitle="Úvod" id="../images/Intro.jpg">
+    <Layout pageTitle="Úvod" page={location.pathname}>
       <div className={styles.page}>
         <div className={styles.paragraph}>
         <p>Jedna veta, ktorá zhrňuje všetko dôležité a potrebné. Ináč nič viac netreba. Fusce rhoncus risus eget nisl vulputate, id placerat mauris molestie. Sed semper sapien nec mi vulputate ultrices. Donec mollis condimentum consequat. Donec viverra sit amet lectus ac sagittis. Nullam porta arcu ut neque lobortis, sed condimentum leo scelerisque. Fusce viverra tortor sed nunc commodo ultrices. Etiam vitae convallis augue, ut efficitur diam. Sed eu arcu magna. Mauris pretium est et enim bibendum, vitae tempus dui ultricies. Quisque non odio sed erat sodales porttitor.</p>
         </div>
-        <div className={styles.separator}>
-          <StaticImage src="../images/Ciara.png" alt="Separator image"/>
-        </div>
+        <Separator />
         {
           data.allMarkdownRemark.nodes.map(node => (
           <div key={node.frontmatter.id} className={styles.paragraph}>

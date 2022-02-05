@@ -2,7 +2,20 @@ import React from "react"
 import { Link } from "gatsby"
 import * as styles from '../styles/navbar.module.css'
 
-export default function Navbar() {
+
+const SetupLinkLighlight = ({path, to, linkName}) => {
+
+    return path === to ? (
+        <div className={styles.highlight}>
+        <Link to={to}>{linkName}</Link>
+        </div>
+        ) : (
+        <div><Link to={to}>{linkName}</Link></div>
+        )
+}
+
+const Navbar = ( {path}) => {
+
     return (
         <nav className={styles.navcontainer} >
         <div className={styles.navbar}>
@@ -11,14 +24,16 @@ export default function Navbar() {
             <h1>Jozef Podprocký</h1>
             </div>
             <div className={styles.links}>
-                <Link to='/'>Úvod</Link>
-                <Link to='/listen'>Ukážky</Link>
-                <Link to='/works'>Tvorba</Link>
-                <Link to='/cv'>Životopis</Link>
-                <Link to='/downloads'>Na stiahnutie</Link>
-                <Link to='/contact'>Kontakt</Link>
+                <SetupLinkLighlight path={path} to='/' linkName='Úvod' />
+                <SetupLinkLighlight path={path} to='/cv' linkName='Životopis' />
+                <SetupLinkLighlight path={path} to='/works' linkName='Tvorba' />
+                <SetupLinkLighlight path={path} to='/listen' linkName='Ukážky' />
+                <SetupLinkLighlight path={path} to='/downloads' linkName='Na stiahnutie' />
+                <SetupLinkLighlight path={path} to='/contact' linkName='Kontakt' />
             </div>
         </div>
         </nav>
     )
 }
+
+export default Navbar

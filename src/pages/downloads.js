@@ -1,7 +1,6 @@
 import { graphql, useStaticQuery } from 'gatsby'
 import React from 'react'
 import Layout from '../components/layout'
-import * as styles from '../styles/opuslist.module.css'
 import * as textStyles from '../styles/downloads.module.css'
 
 export const opusQuery = graphql`
@@ -41,9 +40,9 @@ const DownloadList = () => {
           {data.allOpusyJson.nodes.map(node => (
             <tr key={node.id}>
               <td>{node.Opus}</td>
-              <td className={styles.column_align_left}>{node.Nazov}</td>
+              <td style={{textAlign: "left"}}>{node.Nazov}</td>
               <td>{node.Minutaz}</td>
-              <td><a href={node.pdf} className={textStyles.buttonYellow}>Stiahnut</a></td>
+              <td><a href={node.pdf} className={textStyles.buttonYellow}>Stiahnuť</a></td>
             </tr>
           ))}
         </tbody>
@@ -53,7 +52,7 @@ const DownloadList = () => {
     )
   }
 
-  const DownloadPage = () => {
+  const DownloadPage = ({location}) => {
     
     React.useEffect(() => {
       document.body.style.backgroundColor = "transparent";
@@ -63,7 +62,7 @@ const DownloadList = () => {
     
     return (
       <div>
-      <Layout pageTitle="Na stiahnutie" id="download">
+      <Layout pageTitle="Na stiahnutie" page={location.pathname}>
           <p>Partitúry na stiahnutie k opusom uvedeným nižsie. V prípade záujmu o iné partitúry nás prosím kontaktujte.</p>
           <DownloadList />
       </Layout>

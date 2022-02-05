@@ -9,5 +9,5 @@
 }
 
 .buttonYellow {
-    color: rgb(247, 223, 8)
+    color: var(--default-yellow);
 }

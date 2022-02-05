@@ -2,7 +2,7 @@ import * as React from 'react'
 import Layout from '../components/layout'
 import * as styles from '../styles/contact.module.css'
 
-const ContactPage = () => {
+const ContactPage = ({location}) => {
 
     React.useEffect(() => {
         document.body.style.backgroundColor = "transparent";
@@ -12,21 +12,21 @@ const ContactPage = () => {
 
     return (
         <div>
-        <Layout pageTitle="Kontakt" id="contact">
+        <Layout pageTitle="Kontakt" page={location.pathname}>
             <form className={styles.gridStyle} 
                     method="post" action="https://getform.io/f/595d4fc2-05ba-4b3f-94a1-ed9a1e445223">
     
-            <label for="name">Meno:
+            <label >Meno:
             <input type="text" name="name" id="name" size="20" className={styles.input}/>
             </label>
-            <label for="email">E-mail:
+            <label >E-mail:
             <input type="email" name="email" id="email" size="20" className={styles.input}/>
             </label>
-            <label for="subject">Predmet:
+            <label >Predmet:
             <input type="text" name="subject" id="subject" size="20" className={styles.input}/>
             </label>
 
-            <label for="message">
+            <label >
                 Správa:<br />
                 <textarea name="message" id="message" rows="5" className={styles.input}/>
             </label>

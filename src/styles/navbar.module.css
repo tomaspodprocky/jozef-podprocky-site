@@ -16,24 +16,26 @@
     padding: 1px 1px;
     /* align-items:baseline; */
     /* grid-column: 2; */
-    max-width: 1000px;
+    max-width: var(--default-max-width);
 }
 
 .navbar h1 {
     font-family: 'Abril Fatface', cursive;
     font-size: 2.8em;
-    margin-top:-5px;
-    color: rgb(247, 223, 8)
+    font-weight: lighter;
+    margin-top:-12px;
+    color: var(--default-yellow)
 }
 
 .navbar p {
     font-size: 1em;;
-    color: rgb(247, 223, 8)
+    color: var(--default-yellow)
 }
 
 .navbar .links {
-    display: inline;
-    text-align: right;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
     align-self: end;
 }
 
@@ -47,4 +49,11 @@
 
 .navbar a:hover {
     border-color: white;
+}
+
+.highlight *{
+    color: var(--default-yellow);
+}
+.highlight a {
+    border-color: var(--default-yellow);
 }

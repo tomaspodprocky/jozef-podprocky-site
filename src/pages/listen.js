@@ -1,10 +1,21 @@
 import * as React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import Layout from '../components/layout'
-import Player from '../components/audio'
 import * as styles from '../styles/listen.module.css'
 
-const MusicPage = () => {
+const Player = ({audio_source}) => {
+
+  console.log(audio_source)
+  return(
+    <div>
+      <audio controls src={audio_source.publicURL}>
+        Your browser does not support the
+        <code>audio</code> element.
+      </audio>
+    </div>
+  )};
+
+const MusicPage = ({location}) => {
 
     const data = useStaticQuery(graphql`
     query GetMp3fromJson {
@@ -41,7 +52,8 @@ const MusicPage = () => {
 
     return (
       <div>
-      <Layout pageTitle="Hudba" id="listen">
+      <Layout pageTitle="Hudba" page={location.pathname}>
+          <p>Nižšie sú k dispozícii ukážky z vybraných skladieb a prípadne linky na Youtube. Ukážky sú časovo limitované.</p>
           <div className={styles.page}>
             <table className={styles.table}>
             {

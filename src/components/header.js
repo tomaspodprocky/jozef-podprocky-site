@@ -25,6 +25,8 @@ const Header = ( {path}) => {
                 justifyContent: "space-around",
                 top: "20px",
                 zIndex: 1000,
+                paddingLeft: "10px",
+                paddingRight: "10px",
             }}>
             <div style={{
                     flexGrow: 5,

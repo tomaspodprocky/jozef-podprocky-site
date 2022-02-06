@@ -21,6 +21,8 @@ const CvPage = ({location}) => {
     <Layout pageTitle="Životopis" page={location.pathname}>
         <div className={styles.row}>
           <div className={styles.column}>
+            <p style={{paddingBottom:"10px",}}>hudobný skladateľ a pedagóg</p>
+            <p>10.6.1944 Žakarovce - 31.3.2021 Košice</p>
             <div >
               <StaticImage
                   alt="Portrait"
@@ -28,9 +30,7 @@ const CvPage = ({location}) => {
               />
             </div>
             <div className={styles.paragraph}>
-              <p>hudobný skladateľ a pedagóg</p>
-              <p>10.6.1944 Žakarovce - 31.3.2021 Košice</p>
-              <p>Každou niťou svojho života je spätý s východným Slovenskom – tu sa narodil a vyštudoval základy hudby. Neskôr svoje nadobudnuté vedomosti a profesionálne skúsenosti odovzdával svojim žiakom na košickom Konzervatóriu, kde pôsobil 44 rokov. </p>
+              <p className="cvintro">Každou niťou svojho života je spätý s východným Slovenskom – tu sa narodil a vyštudoval základy hudby. Neskôr svoje nadobudnuté vedomosti a profesionálne skúsenosti odovzdával svojim žiakom na košickom Konzervatóriu, kde pôsobil 44 rokov. </p>
               <Separator />
               <p>Po ukončení základnej školy v Žakarovciach pokračoval v štúdiu na Jedenásťročnej strednej škole v neďalekej Gelnici, kde súčasne navštevoval aj Hudobnú školu a naďalej sa venoval štúdiu hudby a  napredoval v hre na klavíri i v hudobnej teórii.  Po maturite v roku 1961 bol prijatý na Konzervatórium v Košiciach., kde študoval klavírnu hru u Ireny Koreňovej a skladbu u Juraja Hatríka. Od roku 1965 pokračoval v štúdiu skladby  na HF VŠMU v Bratislave u prof. Jána Cikkera a Alexandra Moyzesa, kde v roku 1970 aj absolvoval. Od roku 1969 do 2013 pedagogicky pôsobil na Konzervatóriu v Košiciach, kde vyučoval hudobno-teoretické predmety a  kompozíciu. K jeho žiakom patrili napríklad skladatelia ako Peter Breiner, Iris Szeghy, Norbert Bodnár, Alexander Mihalič, Jana Kmiťová, Ivan Buffa, Peter Duchnický a ďalší. V rokoch 1986 – 1988 bol aj riaditeľom Štátnej filharmónie v Košiciach.</p>
               <p>V kompozičnej činnosti sa popri dominantnej tvorbe orchestrálnych, koncertantných a komorných skladieb, venuje aj sakrálnej, inštruktívnej, vokálno-inštrumentálnej i zborovej tvorbe. Inšpirácie zo slovenskej kompozičnej školy a folklórneho materiálu transformoval postupmi európskej hudobnej moderny (bartókovské technológie, princípy 2. viedenskej školy, sonoristika...). Inklinuje k hudobným štruktúram, ktoré vo zvukovej podobe implikujú súčasnosť a ozvučujú aj čiastku z jeho charakteru takým technologicko-tvorivým poriadkom, čo znie dobre a novo. </p>

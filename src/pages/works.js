@@ -67,6 +67,7 @@ const WorksPage = ({location}) => {
   return (
     <div>
     <Layout pageTitle="Zoznam tvorby" page={location.pathname}>
+        <p className='intro'>Toto je zoznam vsetkych skladieb...</p>
         <OpusList />
         <div className="separator"><Separator /></div>
     </Layout>

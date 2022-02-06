@@ -25,8 +25,11 @@ const Layout = ({ pageTitle, page, children }) => {
       <div 
         style={{
           maxWidth: "var(--default-max-width)",
-          margin: "50px auto 0px auto",
-          color: "beige",
+          marginTop: "var(--default-margin-top)",
+          marginBottom: "0px",
+          marginLeft:"auto",
+          marginRight:"auto",
+          // color: "beige",
           backgroundColor: "rgba(0, 0, 0, 0)",
         }}>
         <main>{children}</main>

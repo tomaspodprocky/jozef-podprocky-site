@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import Header from './header'
-import Separator from './separator'
+// import Separator from './separator'
 import SEO from './seo'
 import '../styles/global.css'
 
@@ -31,13 +31,7 @@ const Layout = ({ pageTitle, page, children }) => {
         }}>
         <main>{children}</main>
       </div>
-      <footer 
-        style={{  
-          textAlign: "center",
-          padding: "20px 20px",
-        }}>
-        <Separator />
-      </footer>
+      <footer></footer>
     </>
   )
 }

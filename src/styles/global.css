@@ -31,8 +31,19 @@ body {
     background-position:top right;
     background-attachment: fixed;
     background-blend-mode: overlay;
-    transition: background-image 3s;
+    transition: background-image 0.5s;
   }
+
+.intro {
+    margin: 10px auto;
+    text-align: justify;
+    max-width: 50%;
+}
+
+.separator {
+  text-align: center;
+  padding: 20px 20px;
+}
 
 table {
     border-collapse: collapse;

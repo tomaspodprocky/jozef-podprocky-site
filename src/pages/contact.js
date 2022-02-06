@@ -1,5 +1,6 @@
 import * as React from 'react'
 import Layout from '../components/layout'
+import Separator from '../components/separator'
 import * as styles from '../styles/contact.module.css'
 
 const ContactPage = ({location}) => {
@@ -8,6 +9,8 @@ const ContactPage = ({location}) => {
         document.body.style.backgroundColor = "transparent";
         document.body.style.backgroundImage = "url(/contact.jpg)";
         document.body.style.backgroundPosition = "top left";
+        // document.body.style.transition = "background-image 0s";
+        // document.body.style.transitionDelay = "0s";
       })
 
     return (
@@ -35,6 +38,7 @@ const ContactPage = ({location}) => {
             <input type="reset" value="Zmazať" className={styles.button} />
             </div>
         </form>
+        <div className="separator"><Separator /></div>
         </Layout>
         </div>
     )

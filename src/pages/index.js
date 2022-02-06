@@ -4,8 +4,6 @@ import Layout from '../components/layout'
 import * as styles from '../styles/index.module.css'
 import { graphql, useStaticQuery } from 'gatsby'
 import Separator from '../components/separator'
-import BackgroundImage from 'gatsby-background-image'
-
 
 // Step 2: Define your component
 const IndexPage = ({location}) => {
@@ -34,8 +32,8 @@ const IndexPage = ({location}) => {
           document.body.style.backgroundImage = "url(/Intro.jpg)";
           document.body.style.backgroundColor = "transparent";
           document.body.style.backgroundPosition = "top right";
-          document.body.style.transition = "background-image 3s";
-          document.body.style.transitionDelay = "3s";
+          // document.body.style.transition = "background-image 0.5s";
+          // document.body.style.transitionDelay = "0.5s";
         })
 
   return (
@@ -43,7 +41,9 @@ const IndexPage = ({location}) => {
     <Layout pageTitle="Úvod" page={location.pathname}>
       <div className={styles.page}>
         <div className={styles.paragraph}>
-        <p>Jedna veta, ktorá zhrňuje všetko dôležité a potrebné. Ináč nič viac netreba. Fusce rhoncus risus eget nisl vulputate, id placerat mauris molestie. Sed semper sapien nec mi vulputate ultrices. Donec mollis condimentum consequat. Donec viverra sit amet lectus ac sagittis. Nullam porta arcu ut neque lobortis, sed condimentum leo scelerisque. Fusce viverra tortor sed nunc commodo ultrices. Etiam vitae convallis augue, ut efficitur diam. Sed eu arcu magna. Mauris pretium est et enim bibendum, vitae tempus dui ultricies. Quisque non odio sed erat sodales porttitor.</p>
+        <p className="intro">
+        Jedna veta, ktorá zhrňuje všetko dôležité a potrebné. Ináč nič viac netreba. Fusce rhoncus risus eget nisl vulputate, id placerat mauris molestie. Sed semper sapien nec mi vulputate ultrices. Donec mollis condimentum consequat. Donec viverra sit amet lectus ac sagittis. Nullam porta arcu ut neque lobortis, sed condimentum leo scelerisque. Fusce viverra tortor sed nunc commodo ultrices. Etiam vitae convallis augue, ut efficitur diam. Sed eu arcu magna. Mauris pretium est et enim bibendum, vitae tempus dui ultricies. Quisque non odio sed erat sodales porttitor.
+        </p>
         </div>
         <Separator />
         {
@@ -56,6 +56,7 @@ const IndexPage = ({location}) => {
           ))
         }
       </div>
+      <div className="separator"><Separator /></div>
     </Layout>
     </div>
   )

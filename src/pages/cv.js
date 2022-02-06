@@ -12,6 +12,8 @@ const CvPage = ({location}) => {
     document.body.style.backgroundColor = "transparent";
     document.body.style.backgroundImage = "url(/about.jpg)";
     document.body.style.backgroundPosition = "top center";
+    // document.body.style.transition = "background-image 0s";
+    // document.body.style.transitionDelay = "0s";
   })
 
   return (
@@ -43,6 +45,7 @@ const CvPage = ({location}) => {
               <p>Na CD nosičoch sú zaznamenané skladby Missa brevis ex D a Vesperae cassovienses F.X.Zomba (1779-1823) pre sóla, miešaný zbor, komorný orchester a organ, ktoré sú aranžmánmi Jozefa Podprockého. Dychové kvinteto členov ŠFK, Košické kvarteto a sólisti Mária Kormanová - akordeón, Ivan Buffa - klavír a Ivan Sokol - organ participujú na jeho autorskom CD - Chamber Music. Akordeónista Peter Katina a klarinetista Martin Švec, sú interpretmi na jeho autorskom CD – Work for accordion. Mnoho jeho kompozícií je zaznamenaných aj v hudobnom archíve RTVS s rôznymi sólistami, súbormi a orchestrami.</p> 
               <p>Košice, 2019 – archív J.P.</p>
             </div>
+            <div className="separator"><Separator /></div>
           </div>
           <div className={styles.column}>
             <div className={styles.photos}>

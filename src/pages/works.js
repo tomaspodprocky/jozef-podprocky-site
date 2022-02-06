@@ -2,6 +2,7 @@
 import * as React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import Layout from '../components/layout'
+import Separator from '../components/separator'
 // import OpusList from '../components/opuslist'
 
 export const opusQuery = graphql`
@@ -59,12 +60,15 @@ const WorksPage = ({location}) => {
     document.body.style.backgroundColor = "transparent";
     document.body.style.backgroundImage = "url(/music.jpg)";
     document.body.style.backgroundPosition = "top right";
+    // document.body.style.transition = "background-image 0s";
+    // document.body.style.transitionDelay = "0s";
   })
 
   return (
     <div>
     <Layout pageTitle="Zoznam tvorby" page={location.pathname}>
         <OpusList />
+        <div className="separator"><Separator /></div>
     </Layout>
     </div>
   )

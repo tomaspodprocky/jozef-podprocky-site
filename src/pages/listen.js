@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import Layout from '../components/layout'
+import Separator from '../components/separator'
 import * as styles from '../styles/listen.module.css'
 
 const Player = ({audio_source}) => {
@@ -48,12 +49,14 @@ const MusicPage = ({location}) => {
       document.body.style.backgroundColor = "transparent";
       document.body.style.backgroundImage = "url(/listen.jpg)";
       document.body.style.backgroundPosition = "top right";
+      // document.body.style.transition = "background-image 0s";
+      // document.body.style.transitionDelay = "0s";
     })
 
     return (
       <div>
       <Layout pageTitle="Hudba" page={location.pathname}>
-          <p>Nižšie sú k dispozícii ukážky z vybraných skladieb a prípadne linky na Youtube. Ukážky sú časovo limitované.</p>
+          <p className="intro">Nižšie sú k dispozícii ukážky z vybraných skladieb a prípadne linky na Youtube. Ukážky sú časovo limitované.</p>
           <div style={{
               marginTop: "150px",
               marginBottom: "150px",
@@ -86,6 +89,7 @@ const MusicPage = ({location}) => {
               }
             </table>
           </div>
+          <div className="separator"><Separator /></div>
       </Layout>
         </div>
     )

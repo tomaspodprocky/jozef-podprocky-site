@@ -1,6 +1,7 @@
 import { graphql, useStaticQuery } from 'gatsby'
 import React from 'react'
 import Layout from '../components/layout'
+import Separator from '../components/separator'
 import * as textStyles from '../styles/downloads.module.css'
 
 export const opusQuery = graphql`
@@ -72,13 +73,17 @@ const DownloadList = () => {
       document.body.style.backgroundColor = "transparent";
       document.body.style.backgroundImage = "url(/download.jpg)";
       document.body.style.backgroundPosition = "top center";
+      // document.body.style.transition = "background-image 0s";
+      // document.body.style.transitionDelay = "0s";
     })
     
     return (
       <div>
       <Layout pageTitle="Na stiahnutie" page={location.pathname}>
-          <p>Čiastočné ukážky partitúr na stiahnutie k opusom uvedeným nižsie. V prípade záujmu o kompletné partitúry, alebo partitúry pre iné diela, nás prosím kontaktujte.</p>
+          <p className="intro">
+            Čiastočné ukážky partitúr na stiahnutie k opusom uvedeným nižsie. V prípade záujmu o kompletné partitúry, alebo partitúry pre iné diela, nás prosím kontaktujte.</p>
           <DownloadList />
+          <div className="separator"><Separator /></div>
       </Layout>
       </div>
     )

@@ -21,7 +21,14 @@ query  {
           id
         }
       }
-    }`
+    allFile(filter: {extension: {eq: "pdf"}}) {
+      nodes {
+        id
+        relativePath
+        publicURL
+      }
+    }
+  }`
 
 const DownloadList = () => {
     const data = useStaticQuery(opusQuery)
@@ -42,7 +49,14 @@ const DownloadList = () => {
               <td>{node.Opus}</td>
               <td style={{textAlign: "left"}}>{node.Nazov}</td>
               <td>{node.Minutaz}</td>
-              <td><a href={node.pdf} className={textStyles.buttonYellow}>Stiahnuť</a></td>
+              <td>
+                <a href={ (() => { 
+                    const retValue = data.allFile.nodes.find(file => file.relativePath === node.pdf);
+                    console.log(retValue);
+                    return (retValue.publicURL);
+                    })() } 
+                  className={textStyles.buttonYellow}>Stiahnuť</a>
+              </td>
             </tr>
           ))}
         </tbody>
@@ -63,7 +77,7 @@ const DownloadList = () => {
     return (
       <div>
       <Layout pageTitle="Na stiahnutie" page={location.pathname}>
-          <p>Partitúry na stiahnutie k opusom uvedeným nižsie. V prípade záujmu o iné partitúry nás prosím kontaktujte.</p>
+          <p>Čiastočné ukážky partitúr na stiahnutie k opusom uvedeným nižsie. V prípade záujmu o kompletné partitúry, alebo partitúry pre iné diela, nás prosím kontaktujte.</p>
           <DownloadList />
       </Layout>
       </div>

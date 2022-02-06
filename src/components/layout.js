@@ -1,11 +1,9 @@
 import * as React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import Navbar from './navbar'
+import Header from './header'
 import Separator from './separator'
+import SEO from './seo'
 import '../styles/global.css'
-
-import {
-    container, footer } from '../styles/layout.module.css'
 
 const Layout = ({ pageTitle, page, children }) => {
 
@@ -20,17 +18,27 @@ const Layout = ({ pageTitle, page, children }) => {
   `)
 
   return (
-    <div>
+    <>
+      <SEO />
       <title>{pageTitle} | {data.site.siteMetadata.title}</title>
-      <Navbar path={page}/>
-      <div className={container}>
-        {/* <h1 className={heading}>{pageTitle}</h1> */}
-        {children}
+      <Header path={page}/>
+      <div 
+        style={{
+          maxWidth: "var(--default-max-width)",
+          margin: "50px auto 0px auto",
+          color: "beige",
+          backgroundColor: "rgba(0, 0, 0, 0)",
+        }}>
+        <main>{children}</main>
       </div>
-      <footer className={footer}>
+      <footer 
+        style={{  
+          textAlign: "center",
+          padding: "20px 20px",
+        }}>
         <Separator />
       </footer>
-    </div>
+    </>
   )
 }
 

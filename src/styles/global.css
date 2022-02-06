@@ -25,12 +25,13 @@ html {
     }
 
 body {
-    background-color: rgb(0, 0, 0);
+    /* background-image: "url(/Intro.jpg)"; */
     background-size: cover;
     background-repeat: no-repeat;
     background-position:top right;
     background-attachment: fixed;
     background-blend-mode: overlay;
+    transition: background-image 3s;
   }
 
 table {

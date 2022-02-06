@@ -54,29 +54,36 @@ const MusicPage = ({location}) => {
       <div>
       <Layout pageTitle="Hudba" page={location.pathname}>
           <p>Nižšie sú k dispozícii ukážky z vybraných skladieb a prípadne linky na Youtube. Ukážky sú časovo limitované.</p>
-          <div className={styles.page}>
+          <div style={{
+              marginTop: "150px",
+              marginBottom: "150px",
+            }}>
             <table className={styles.table}>
-            {
-            data.music.nodes.map((node) => (
-              <tr key={node.id}>
-                <td className={styles.centered}><Player audio_source = 
-                  { data.allFile.nodes.find(file => file.relativePath === node.Mp3) }
-                /></td>
-                <td>{node.Opus}</td>
-                <td>{node.Nazov}</td>
-              </tr>
-              ))
-            }
-            {
-              data.videos.nodes.map((node) => (
-                <tr key={node.id} >
-                  <td className={styles.centered}><a href={node.Youtube}>Youtube link</a></td>
-                  <td>{node.Opus}</td>
+              {
+              data.music.nodes.map((node) => (
+                <tr key={node.id}>
+                  <td className={styles.centered}>
+                    <Player audio_source = 
+                      { data.allFile.nodes.find(file => file.relativePath === node.Mp3) }
+                    />
+                  </td>
+                  <td>Opus {node.Opus}</td>
                   <td>{node.Nazov}</td>
                 </tr>
-              )
-              )
-            }
+                ))
+              }
+              {
+                data.videos.nodes.map((node) => (
+                  <tr key={node.id} >
+                    <td className={styles.centered}>
+                      <a href={node.Youtube}>Youtube link</a>
+                    </td>
+                    <td>Opus {node.Opus}</td>
+                    <td>{node.Nazov}</td>
+                  </tr>
+                )
+                )
+              }
             </table>
           </div>
       </Layout>

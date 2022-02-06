@@ -36,13 +36,8 @@ module.exports = {
         path: `${__dirname}/mp3`,
       }
     },
-    {
-      resolve: "gatsby-transformer-csv",
-      options: {
-        delimiter: 'auto'
-      }
-    },
     "gatsby-transformer-json",
-    "gatsby-transformer-remark"
+    "gatsby-transformer-remark",
+    "gatsby-plugin-react-helmet"
   ],
 };

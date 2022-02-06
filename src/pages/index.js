@@ -34,10 +34,12 @@ const IndexPage = ({location}) => {
           document.body.style.backgroundImage = "url(/Intro.jpg)";
           document.body.style.backgroundColor = "transparent";
           document.body.style.backgroundPosition = "top right";
+          document.body.style.transition = "background-image 3s";
+          document.body.style.transitionDelay = "3s";
         })
 
   return (
-    <div className={styles.intro}>
+    <div>
     <Layout pageTitle="Úvod" page={location.pathname}>
       <div className={styles.page}>
         <div className={styles.paragraph}>

@@ -5,6 +5,7 @@ const SEO = () => {
     return (
         <Helmet htmlAttributes={{ lang: 'sk',}}>
             <meta charSet="utf-8" />
+            <title>Jozef Podprocky</title>
         </Helmet>
     )
 }

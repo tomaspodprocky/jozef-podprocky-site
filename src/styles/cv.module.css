@@ -1,11 +1,6 @@
-
-.page {
-    padding-left: 0px;
-    padding-right: 0px;
-}
-
 .row {
     display: flex;
+    flex-direction: row;
     margin-top: -50px !important;
 }
 
@@ -13,12 +8,6 @@
     flex: 50%;
     padding: 10px;
 }
-
-@media screen and (max-width: 600px) {
-    .column {
-      width: 100%;
-    }
-  }
 
 .paragraph {
     flex-grow:1;
@@ -32,6 +21,19 @@
 .photos {
     margin-top: -180px;
     padding-left: 45px;
-    /* align-self: center; */
     position:fixed;
 }
+
+@media (max-width: 600px) {
+    .row {
+        flex-direction: column;
+    }
+    .column {
+      width: 100%;
+    }
+    .photos {
+        position: unset;
+        margin: auto;
+        padding: auto;
+    }
+  }

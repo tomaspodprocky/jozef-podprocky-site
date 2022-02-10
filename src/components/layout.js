@@ -31,6 +31,8 @@ const Layout = ({ pageTitle, page, children }) => {
           marginRight:"auto",
           // color: "beige",
           backgroundColor: "rgba(0, 0, 0, 0)",
+          paddingLeft: "10px",
+          paddingRight: "10px",
         }}>
         <main>{children}</main>
       </div>

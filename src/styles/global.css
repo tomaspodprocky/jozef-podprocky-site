@@ -41,17 +41,6 @@ body {
   margin-top:0px;
   margin-bottom: var(--default-margin-top);
   text-align: justify;
-  max-width: 60%;
-  font-size:larger;
-}
-
-.indexintro {
-  margin-left: 0px;
-  margin-right: auto;
-  margin-top:0px;
-  margin-bottom: var(--default-margin-top);
-  text-align: justify;
-  max-width: 60%;
   font-size:larger;
 }
 
@@ -64,9 +53,15 @@ body {
   font-size:larger;
 }
 
-.intro::first-letter,
+@media (min-width: 200px) {
+  .intro { max-width: 100%; }
+}
+@media (min-width: 700px) {
+  .intro {max-width: 60%;}
+}
+
 .cvintro::first-letter,
-.indexintro::first-letter {
+.intro::first-letter {
   font-family: 'Abril Fatface', cursive;
   font-size: 2em;
   font-weight: lighter;
@@ -114,6 +109,12 @@ td {
 
   table tbody tr:nth-child(even) {
     background-color: #66484831;
+  }
+
+  @media (max-width: 700px) {
+    table {
+      font-size: small;
+    }
   }
 
 

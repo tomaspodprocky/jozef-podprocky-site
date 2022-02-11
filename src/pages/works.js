@@ -17,7 +17,7 @@ query  {
           Opus
           Premiera
           Reflexia_diela
-          Rok_vzniku_alebo_revizie
+          Rok_vzniku
           Vydanie
           id
         }
@@ -33,6 +33,7 @@ const OpusList = () => {
           <tr>
             <th>Opus</th>
             <th>Nazov</th>
+            <th>Obsadenie</th>
             <th>Minutaz</th>
             <th>Rok vzniku</th>
           </tr>
@@ -42,8 +43,9 @@ const OpusList = () => {
             <tr key={node.id}>
               <td>{node.Opus}</td>
               <td style={{textAlign: "left"}}>{node.Nazov}</td>
+              <td style={{textAlign: "left"}}>{node.Obsadenie}</td>
               <td>{node.Minutaz}</td>
-              <td>{node.Rok_vzniku_alebo_revizie}</td>
+              <td>{node.Rok_vzniku}</td>
             </tr>
           ))}
         </tbody>
@@ -67,7 +69,7 @@ const WorksPage = ({location}) => {
   return (
     <div>
     <Layout pageTitle="Zoznam tvorby" page={location.pathname}>
-        <p className='intro'>Toto je zoznam vsetkych skladieb...</p>
+        <p className='intro'>Nižšie je uvedený kompletný zoznam tvorby. Obsahuje ako vsetky opusové čisla, tak aj diela vytvorené na objednávku k rôznym príležitostiam.</p>
         <OpusList />
         <div className="separator"><Separator /></div>
     </Layout>

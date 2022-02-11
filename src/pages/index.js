@@ -41,7 +41,7 @@ const IndexPage = ({location}) => {
       <Layout pageTitle="Úvod" page={location.pathname}>
           <div>
           <p className="intro">
-          Jedna veta, ktorá zhrňuje všetko dôležité a potrebné. Ináč nič viac netreba. Fusce rhoncus risus eget nisl vulputate, id placerat mauris molestie. Sed semper sapien nec mi vulputate ultrices. Donec mollis condimentum consequat. Donec viverra sit amet lectus ac sagittis. Nullam porta arcu ut neque lobortis, sed condimentum leo scelerisque. Fusce viverra tortor sed nunc commodo ultrices. Etiam vitae convallis augue, ut efficitur diam. Sed eu arcu magna. Mauris pretium est et enim bibendum, vitae tempus dui ultricies. Quisque non odio sed erat sodales porttitor.
+          Vitajte na stránke venovanej tvorbe košického hudobného skladateľa Jozefa Podprockého. Nájdete tu kompletný zoznam tvorby ako aj notové a hudobné ukážky jeho vybraných diel. V prípade otázok nás prosím neváhajte kontaktovať.
           </p>
           </div>
           <Separator />

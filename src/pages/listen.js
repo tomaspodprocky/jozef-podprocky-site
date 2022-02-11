@@ -56,7 +56,7 @@ const MusicPage = ({location}) => {
     return (
       <div>
       <Layout pageTitle="Hudba" page={location.pathname}>
-          <p className="intro">Nižšie sú k dispozícii ukážky z vybraných skladieb a prípadne linky na Youtube. Ukážky sú časovo limitované.</p>
+          <p className="intro">Nižšie sú k dispozícii ukážky z vybraných skladieb a prípadne linky na Youtube. Cieľom je illustrovať tvorbu Jozefa Podprockého, a preto nie sú kompletné.</p>
           <div style={{
               marginTop: "150px",
               marginBottom: "150px",

@@ -16,7 +16,7 @@ const ContactPage = ({location}) => {
     return (
         <div>
         <Layout pageTitle="Kontakt" page={location.pathname}>
-            <p className="intro">Každou niťou svojho života je spätý s východným Slovenskom – tu sa narodil a vyštudoval základy hudby. Neskôr svoje nadobudnuté vedomosti a profesionálne skúsenosti odovzdával svojim žiakom na košickom Konzervatóriu, kde pôsobil 44 rokov. </p>
+            <p className="intro">Ak máte otázky k tvorbe Jozefa Podprockého, alebo máte záujem o noty k niektorým skladbám, či uz nám len chcete zanechať správu, použite prosím kontaktný formulár nižie.</p>
             <form className={styles.gridStyle} 
                     method="post" action="https://getform.io/f/595d4fc2-05ba-4b3f-94a1-ed9a1e445223">
     

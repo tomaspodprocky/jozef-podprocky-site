@@ -87,18 +87,18 @@ td {
     padding: 10px 10px;
   }
 
-  table thead tr {
+table thead tr {
     height: 60px;
     background: #383738c7;
   }
 
-  table thead tr th {
+table thead tr th {
     font-size: 18px;
     font-weight: normal;
     padding: 10px 10px;
   }
 
-  table tbody tr th {
+table tbody tr th {
     font-weight: normal;
   }
 

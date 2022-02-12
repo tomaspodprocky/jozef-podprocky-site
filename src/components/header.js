@@ -31,8 +31,7 @@ const Header = ( {path}) => {
             <div style={{
                     flexGrow: 5,
                     display: "grid",
-                    gridTemplateColumns: "0.8fr 1.2fr",
-                    padding: "1px 1px",
+                    gridTemplateColumns: "0.7fr 1.3fr",
                     maxWidth: "var(--default-max-width)",
                 }}>
                 <div>
@@ -48,6 +47,7 @@ const Header = ( {path}) => {
                             fontWeight: "lighter",
                             marginTop: "-12px",
                             color: "var(--default-yellow)", 
+                            marginBottom: "-2px",
                         }}>
                         Jozef Podprocký
                     </h1>

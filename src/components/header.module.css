@@ -24,3 +24,9 @@
 .highlight a {
     border-color: var(--default-yellow);
 }
+
+/* @media (max-width: 700px) {
+    .links {
+        flex-direction: column;
+    }
+  } */

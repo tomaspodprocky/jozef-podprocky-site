@@ -27,14 +27,16 @@ query  {
 const OpusList = () => {
     const data = useStaticQuery(opusQuery)
     return (
-        <div>
+        <div style={{
+          marginBottom: "100px",
+        }}>
         <table>
         <thead>
           <tr>
             <th>Opus</th>
-            <th>Nazov</th>
+            <th>Názov</th>
             <th>Obsadenie</th>
-            <th>Minutaz</th>
+            <th>Minutáž</th>
             <th>Rok vzniku</th>
           </tr>
         </thead>
@@ -69,7 +71,7 @@ const WorksPage = ({location}) => {
   return (
     <div>
     <Layout pageTitle="Zoznam tvorby" page={location.pathname}>
-        <p className='intro'>Nižšie je uvedený kompletný zoznam tvorby. Obsahuje ako vsetky opusové čisla, tak aj diela vytvorené na objednávku k rôznym príležitostiam.</p>
+        <p className='intro'>Nižšie je uvedený kompletný zoznam tvorby. Obsahuje vsetky opusové čisla aj diela vytvorené na objednávku k rôznym príležitostiam.</p>
         <OpusList />
         <div className="separator"><Separator /></div>
     </Layout>

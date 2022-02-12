@@ -1,8 +1,8 @@
 ---
 title: Pamätný koncert
 date: 2022-02-11
-link: 
-linkName: 
+link: https://www.jozefpodprocky.sk
+linkName: Self
 summary: Pamätný koncert venovaný tvorbe Jozefa Podprockého sa uskutocní 30. marca 2022 v Košiciach. Ten istý koncert sa bude opakovať v Brne na Janáčkovej akadémii dňa 4. apríla 2022.
 lang: sk
 slug: my-test-title

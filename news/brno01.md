@@ -3,7 +3,7 @@ title: Fantázia III. piccola na sekvenciu "Veni sancte Spiritus" v Brne
 date: 2022-02-13
 link: https://www.jozefpodprocky.sk
 linkName: self
-summary: Dňa 10. mája 2022 odznie v kostole Nanebevzetí Panny Marie v Brne,  Jezuitská ul. o 17:00, Fantázia III. (piccola) na sekvenciu "Veni Sancte spiritus" op. 65. Interpretom organovej skladby bude Ján Filc.
+summary: Dňa 10. mája 2022 odznie v kostole Nanebevzetí Panny Marie v Brne,  Jezuitská ul. o 17:00, Fantázia III. (piccola) na sekvenciu "Veni Sancte spiritus" op. 65. Interpretom organovej skladby bude Ján Fic.
 lang: sk
 slug: Brno-kostol-2022
 ---

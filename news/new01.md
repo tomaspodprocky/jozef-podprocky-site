@@ -3,7 +3,7 @@ title: Pamätný koncert
 date: 2022-02-13
 link: https://www.sfk.sk/podujatie/in-memoriam-jozef-podprocky---koncert-je-zruseny
 linkName: www.sfk.sk
-summary: Pamätný koncert venovaný tvorbe Jozefa Podprockého sa uskutocní 30. marca 2022 v Koncertnej sieni Konzervatória v Košiciach na Timonovej 2 o 17:00. Výber skladieb  z tohoto koncertu odznie aj v Brne v dňoch 4. a 29. apríla 2022 na Janáčkovej akadémii (Varhanní sál HF JAMU, 17:00).
+summary: Pamätný koncert venovaný tvorbe Jozefa Podprockého sa uskutocní 30. marca 2022 v Koncertnej sieni Konzervatória v Košiciach na Timonovej 2 o 17:00. Výber skladieb  z tohoto koncertu odznie aj v Brne v dňoch 4. a 29. apríla 2022 na Janáčkovej akadémii v Brne (Varhanní sál HF JAMU, 17:00).
 lang: sk
 slug: ars-nova-2022
 ---

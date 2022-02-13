@@ -50,7 +50,7 @@ const IndexPage = ({location}) => {
             <div key={node.id} className={styles.paragraph}>
               <h3>{node.frontmatter.date} - {node.frontmatter.title}</h3>
               <p>{node.frontmatter.summary}</p>
-              <p>Link: <a href={node.frontmatter.link}>{node.frontmatter.linkName}</a></p>
+              <p>Link: <a href={node.frontmatter.link} target="_blank">{node.frontmatter.linkName}</a></p>
             </div>
             ))
           }

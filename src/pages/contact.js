@@ -16,7 +16,7 @@ const ContactPage = ({location}) => {
     return (
         <div>
         <Layout pageTitle="Kontakt" page={location.pathname}>
-            <p className="intro">Ak máte otázky k tvorbe Jozefa Podprockého, alebo máte záujem o notový materál k niektorým skladbám, alebo nám len chcete zanechať správu, použite prosím kontaktný formulár nišžie.</p>
+            <p className="intro">Ak máte otázky k tvorbe Jozefa Podprockého, alebo máte záujem o notový materál k niektorým skladbám, alebo nám len chcete zanechať správu, použite prosím kontaktný formulár nižšie.</p>
             <form className={styles.gridStyle} 
                     method="post" action="https://getform.io/f/595d4fc2-05ba-4b3f-94a1-ed9a1e445223">
     

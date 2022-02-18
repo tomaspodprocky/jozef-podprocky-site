@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
+// import { useStaticQuery, graphql } from 'gatsby'
 import Header from './header'
 // import Separator from './separator'
 import SEO from './seo'
@@ -7,20 +7,20 @@ import '../styles/global.css'
 
 const Layout = ({ pageTitle, page, children }) => {
 
-  const data = useStaticQuery(graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-  `)
+  // const data = useStaticQuery(graphql`
+  // query {
+  //   site {
+  //     siteMetadata {
+  //       title
+  //     }
+  //   }
+  // }
+  // `)
 
   return (
     <>
-      <SEO />
-      <title>{pageTitle} | {data.site.siteMetadata.title}</title>
+      <SEO pageTitle={pageTitle}/>
+      {/* <title>{pageTitle} | {data.site.siteMetadata.title}</title> */}
       <Header path={page}/>
       <div 
         style={{

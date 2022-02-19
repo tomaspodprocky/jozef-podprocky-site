@@ -35,10 +35,7 @@ const Header = ( {path}) => {
                     maxWidth: "var(--default-max-width)",
                 }}>
                 <div>
-                    <p style={{
-                            fontSize: "1em",
-                            color: "var(--default-yellow)",
-                        }}>
+                    <p className={styles.title}>
                         Hudobný skladateľ
                     </p>
                     <h1 style={{

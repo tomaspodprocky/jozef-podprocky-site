@@ -19,10 +19,50 @@ query  {
           Reflexia_diela
           Rok_vzniku
           Vydanie
+          Zaner
           id
         }
+        distinct(field: Zaner)
       }
     }`
+
+function TableHead() {
+  return (
+    <thead>
+      <tr>
+        <th>Opus</th>
+        <th>Názov</th>
+        <th>Obsadenie</th>
+        <th>Minutáž</th>
+        <th>Rok vzniku</th>
+      </tr>
+    </thead>
+  )
+}
+
+function RenderCategory(props) {
+
+}
+
+function TableRow(props) {
+  return (
+    <tr key={props.id}>
+      <td>{props.Opus}</td>
+      <td style={{textAlign: "left"}}>{props.Nazov}</td>
+      <td style={{textAlign: "left"}}>{props.Obsadenie}</td>
+      <td>{props.Minutaz}</td>
+      <td>{props.Rok_vzniku}</td>
+    </tr> )
+}
+
+function FilteredRows({query, zaner}) {
+  const res = query.allOpusyJson.nodes.filter(nd => nd.Zaner === zaner)
+  return (
+  <>
+    { res.map(node => TableRow(node)) }
+  </>
+  )
+}
 
 const OpusList = () => {
     const data = useStaticQuery(opusQuery)
@@ -30,28 +70,19 @@ const OpusList = () => {
         <div style={{
           marginBottom: "100px",
         }}>
-        <table>
-        <thead>
-          <tr>
-            <th>Opus</th>
-            <th>Názov</th>
-            <th>Obsadenie</th>
-            <th>Minutáž</th>
-            <th>Rok vzniku</th>
-          </tr>
-        </thead>
-        <tbody>
-          {data.allOpusyJson.nodes.map(node => (
-            <tr key={node.id}>
-              <td>{node.Opus}</td>
-              <td style={{textAlign: "left"}}>{node.Nazov}</td>
-              <td style={{textAlign: "left"}}>{node.Obsadenie}</td>
-              <td>{node.Minutaz}</td>
-              <td>{node.Rok_vzniku}</td>
-            </tr>
+          { data.allOpusyJson.distinct.map(zaner => (
+          <>
+            {zaner === "ZZZ" 
+            ? <h2 key={"head" + zaner} style={{marginTop: "50px", marginBottom: "10px"}}>Bez opusu</h2>
+            : <h2 key={"head" + zaner} style={{marginTop: "50px", marginBottom: "10px"}}>{zaner}</h2> }
+            <table key={zaner}>
+            <TableHead />
+            <tbody>
+              <FilteredRows query={data} zaner={zaner} />
+            </tbody>
+            </table>
+          </>
           ))}
-        </tbody>
-      </table>
       </div>
 
     )

@@ -83,7 +83,7 @@ const DownloadList = () => {
       <div>
       <Layout pageTitle="Na stiahnutie" page={location.pathname}>
           <p className="intro">
-            Čiastočné ukážky partitúr sú na stiahnutie k opusom uvedeným nižsie. V prípade záujmu o kompletné partitúry, alebo partitúry pre iné diela nás prosím kontaktujte.</p>
+          Ku všetkým dielam sú k dispozícii partitúry. V prípade záujmu nás prosím kontaktujte. Čiastočné ukážky partitúr sú na stiahnutie k opusom uvedeným nižsie.</p>
           <DownloadList />
           <div className="separator"><Separator /></div>
       </Layout>

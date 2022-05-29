@@ -4,6 +4,7 @@ module.exports = {
     title: "Jozef Podprocky",
   },
   plugins: [
+    "gatsby-plugin-recaptcha",
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
@@ -68,7 +69,6 @@ module.exports = {
     },
     "gatsby-transformer-json",
     "gatsby-transformer-remark",
-    "gatsby-plugin-react-helmet",
-    
-  ],
+    "gatsby-plugin-react-helmet"
+  ]
 };

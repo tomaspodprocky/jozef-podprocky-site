@@ -34,6 +34,7 @@ const ContactPage = ({location}) => {
                 Správa:<br />
                 <textarea name="message" id="message" rows="5" cols="28" className={styles.input}/>
             </label>
+            <div className="g-recaptcha" data-sitekey="6Lep4hsgAAAAAOWcWms7gosHlMu58VUKCwAFh7Ti" />
             <div>
             <button type="submit" className={styles.button}>Poslať</button>
             <input type="reset" value="Zmazať" className={styles.button} />

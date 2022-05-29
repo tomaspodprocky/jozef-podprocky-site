@@ -16,6 +16,7 @@ const SEO = ( {pageTitle} ) => {
         <Helmet htmlAttributes={{ lang: 'sk',}}>
             <meta charSet="utf-8" />
             <title>{pageTitle} | {data.site.siteMetadata.title}</title>
+            <script src={`https://www.google.com/recaptcha/api.js?r=${Math.random()}`} async defer></script>
         </Helmet>
     )
 }

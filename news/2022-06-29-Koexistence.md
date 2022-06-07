@@ -1,6 +1,6 @@
 ---
 title: Malé koncertné štúdio RTVS
-date: 2022-06-2í
+date: 2022-06-29
 link: https://quasarsensemble.com/en/concerts/?event_id1=327
 linkName: Quasars Ensemble
 summary: Dňa 29. 6. 2022 o 19:00 v Malom koncertnom štúdiu RTVS odznie v podaní Quasars Ensemble skladba Concertino pre husle a sláčikové kvinteto, op. 11.

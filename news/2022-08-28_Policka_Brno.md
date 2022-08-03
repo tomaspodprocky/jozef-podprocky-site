@@ -1,6 +1,6 @@
 ---
 title: Nedělní varhanní zastavení s průvodním slovem
-date: 28. 8. 2022
+date: 2022-08-28
 link: https://www.farnostpolicka.cz/kalendar/akce/336#
 linkName: Farnost Polička
 summary: Dňa 28. 8. 2022 o 18:00 v Poličke, kostol sv. Jakuba, v Brne odznie Ave Maria pre soprán a organ op. 7 č. 2 a Ave verum corpus pre spev a organ op. 34 č. 4. v predvedení soprán - Zuzana Barochová, organ - Ján Fic 

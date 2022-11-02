@@ -48,7 +48,7 @@ const IndexPage = ({location}) => {
           {
             data.allMarkdownRemark.nodes.map(node => (
             <div key={node.id} className={styles.paragraph}>
-              <h3>{node.frontmatter.title}</h3>
+              <h3>{node.frontmatter.date} - {node.frontmatter.title}</h3>
               <p>{node.frontmatter.summary}</p>
               <p>Link: <a href={node.frontmatter.link} target="_blank" rel="noreferrer" 
                           style={{color: "var(--default-yellow)"}}>{node.frontmatter.linkName}</a></p>

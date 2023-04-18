@@ -10,7 +10,7 @@ const IndexPage = ({location}) => {
 
   const data = useStaticQuery(graphql`
   query GetMdHeaders {
-    allMarkdownRemark(sort: {order: DESC, fields: frontmatter___date}) {
+    allMarkdownRemark(sort: {frontmatter: {date: DESC}}) {
       nodes {
         frontmatter {
           date(formatString: "DD/MM/YYYY")

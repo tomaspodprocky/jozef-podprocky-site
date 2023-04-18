@@ -22,7 +22,7 @@ query  {
           Zaner
           id
         }
-        distinct(field: Zaner)
+        distinct(field: {Zaner: SELECT})
       }
     }`
 
@@ -38,10 +38,6 @@ function TableHead() {
       </tr>
     </thead>
   )
-}
-
-function RenderCategory(props) {
-
 }
 
 function TableRow(props) {

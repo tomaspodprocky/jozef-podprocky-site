@@ -17,6 +17,7 @@
     "@mdx-js/mdx": "latest",
     "@mdx-js/react": "latest",
     "gatsby": "latest",
+    "gatsby-cli": "^5.12.0",
     "gatsby-plugin-gatsby-cloud": "latest",
     "gatsby-plugin-google-gtag": "latest",
     "gatsby-plugin-image": "latest",

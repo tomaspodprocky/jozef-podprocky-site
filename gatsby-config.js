@@ -69,6 +69,6 @@ module.exports = {
     "gatsby-transformer-json",
     "gatsby-transformer-remark",
     "gatsby-plugin-react-helmet",
-    "gatsby-plugin-netlify"
+    //"gatsby-plugin-netlify"
   ]
 };

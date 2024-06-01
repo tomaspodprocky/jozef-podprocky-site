@@ -1,6 +1,6 @@
 ---
 title: Trio Violettes
-date: 2022-06-02
+date: 2024-06-02
 link: https://www.violapresov.sk/program-a-vstupenky/trio-violettes-2-6
 linkName: violapresov.sk
 summary: V rámci 8. ročníka prehliadky súčasnej sólovej a komornej hudobnej tvorby slovenských a zahraničných autorov odznie Fantázia III. (piccola) na sekvenciu „Veni Sancte spiritus“ pre akordeón, op. 65. Interpretom skladby bude Peter Katina.

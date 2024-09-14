@@ -9,24 +9,46 @@ import Separator from '../components/separator'
 const IndexPage = ({location}) => {
 
   const data = useStaticQuery(graphql`
-  query GetMdHeaders {
-    allMarkdownRemark(sort: {frontmatter: {date: DESC}}) {
-      nodes {
-        frontmatter {
-          date(formatString: "DD/MM/YYYY")
-          lang
-          link
-          summary
-          title
-          linkName
-        }
-        id
+ query GetMdHeaders {
+  allMarkdownRemark(sort: {frontmatter: {date: DESC}}) {
+    nodes {
+      id
+      frontmatter {
+        date(formatString: "DD/MM/YYYY")
+        lang
+        link
+        summary
+        title
+        linkName
+        image
       }
     }
-    file(relativePath: {eq: "Intro.jpg"}) {
-      publicURL
+  }
+  file(relativePath: {eq: "Intro.jpg"}) {
+    publicURL
+  }
+  allImageSharp {
+    nodes {
+      original {
+        width
+        height
+        src
+      }
+      gatsbyImageData
+      fixed {
+        src
+        originalName
+      }
     }
-  }`)
+  }
+}`)
+
+  // Create a mapping between image filenames and their public URLs
+  const imageMap = data.allImageSharp.nodes.reduce((acc, node) => {
+    const filename = node.fixed.src.split('/').pop();
+    acc[filename] = node.gatsbyImageData.images.fallback.src;
+    return acc;
+  }, {});
 
   React.useEffect(() => {
           document.body.style.backgroundImage = "url(/Intro.jpg)";
@@ -48,10 +70,22 @@ const IndexPage = ({location}) => {
           {
             data.allMarkdownRemark.nodes.map(node => (
             <div key={node.id} className={styles.paragraph}>
-              <h3>{node.frontmatter.date} - {node.frontmatter.title}</h3>
-              <p>{node.frontmatter.summary}</p>
-              <p>Link: <a href={node.frontmatter.link} target="_blank" rel="noreferrer" 
-                          style={{color: "var(--default-yellow)"}}>{node.frontmatter.linkName}</a></p>
+                <h3>{node.frontmatter.date} - {node.frontmatter.title}</h3>
+                {node.frontmatter.summary && (
+                  <p>{node.frontmatter.summary}</p>
+              )}  
+                {node.frontmatter.link && (
+                  <p>Link: <a href={node.frontmatter.link} target="_blank" rel="noreferrer" 
+                  style={{ color: "var(--default-yellow)" }}>{node.frontmatter.linkName}</a></p>)}
+              {node.frontmatter.image && imageMap[node.frontmatter.image] && (
+              <p>
+                    <img
+                      src={imageMap[node.frontmatter.image]}
+                      alt={node.frontmatter.title}
+                      style={{ maxWidth: "80%", height: "auto", display: "block", margin: "0 auto" }}
+                    />
+                  </p>
+              )}
             </div>
             ))
           }
